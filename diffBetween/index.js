@@ -1,5 +1,5 @@
 getDiff = (n) => {
-    var n = 10
+    var n = 22
     if (n < 20) {
         return n / 2;
     } else {
