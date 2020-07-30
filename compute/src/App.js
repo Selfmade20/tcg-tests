@@ -23,9 +23,10 @@ function App() {
       <div className="inputs">
         <h3>Base : <input onChange={handleChange}></input></h3>
         <h3>Exponent : <input onChange={handleChange}></input></h3>
+        <h1>{calculate(2, 6)}</h1>
       </div>
       <div className="button">
-        <button onClick={calculate}>Calculate</button>
+        <button>Calculate</button>
       </div>
     </div>
   );
