@@ -9,7 +9,7 @@ function Todo({todo, index}) {
     )
 }
 
-function TodoFrom({addTodo}) {
+function TodoForm({addTodo}) {
     const [value, setValue] = useState('')
 
     const handleSubmit = event => {
@@ -21,8 +21,7 @@ function TodoFrom({addTodo}) {
 
     return (
         <form onSubmit={handleSubmit}>
-            <label>Description</label>
-            <input type="text" className="input" value={value} onChange={e => setValue(e.target.value)} />
+            <input type="text" className="input" placeholder="Add todos here...." value={value} onChange={e => setValue(e.target.value)} />
         </form>
     )
 }
@@ -36,12 +35,18 @@ function Todos() {
         }
     ])
 
+    const addTodo = text => {
+        const newTodos = [...todos, {text}]
+        setTodos(newTodos)
+    }
+    console.log("Hellow", addTodo)
     return (
         <div className="app">
             <div className="todo-list">
                 {todos.map((todo, index) => (
                     <Todo key={index} index={index} todo={todo} />
                 ))}
+                <TodoForm addTodo={addTodo}/>
             </div>
         </div>
     )
