@@ -3,7 +3,7 @@ const User = require('../models/user.model');
 const Todo = require('../models/todo.model')
 
 
-router.route('/register').post(async (req, res) => {
+router.route('/register').post(async (req, res, next) => {
     const email = req.body.email;
     const password = req.body.password;
 
@@ -16,12 +16,13 @@ router.route('/register').post(async (req, res) => {
     try{
         await newUser.save()
         return res.send(newUser).json("User Registered!")
+        next()
     }catch (err) {
         return res.status(400).json("Error:" + err)
     }
 })
 
-router.route('/addTodo').post(async (req, res) => {
+router.route('/addTodo').post(async (req, res, next) => {
     const description = req.body.description;
     const status = req.body.status
 
@@ -33,6 +34,7 @@ router.route('/addTodo').post(async (req, res) => {
     try{
         await newTodo.save()
         return res.send(newTodo).json("User Registered!")
+        next()
     }catch (err) {
         return res.status(400).json("Error:" + err)
     }
