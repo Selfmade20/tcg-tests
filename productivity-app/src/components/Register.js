@@ -16,7 +16,7 @@ function Register() {
                 password: registerPassword
             },
             withCredentials: true,
-            url: "http://localhost:5000/users/register"
+            url: "http://localhost:5000/register"
         }).then((res) => console.log(res));
         // <Redirect to='todos' />
     }
@@ -34,11 +34,11 @@ function Register() {
                 <form onSubmit={handleSubmit}>
                     <div className="email">
                         <label htmlFor="email">Email</label>
-                        <input type="email" required name="email" onChange={(e) => setRegisterEmail(e.target.value)} noValidate placeholder="Email" />
+                        <input type="email" required name="email" onChange={(e) => setRegisterEmail(e.target.value)} placeholder="Email" />
                     </div>
                     <div className="password">
                         <label htmlFor="password">Password</label>
-                        <input type="password" required name="password" onChange={(e) => setRegisterPassword(e.target.value)} noValidate placeholder="Password" />
+                        <input type="password" required name="password" onChange={(e) => setRegisterPassword(e.target.value)} placeholder="Password" />
                     </div>
                     <div className="submit">
                         <Button variant="contained" color="primary" onClick={register} >Register</Button>
