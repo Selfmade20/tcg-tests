@@ -26,14 +26,14 @@ function Register() {
         <form noValidate>
           <div className="email">
             <label htmlFor="email">Email</label>
-            <input type="email" required name="email" onChange={(e) => setRegisterEmail(e.target.value)} noValidate placeholder="Username" />
+            <input type="email" required name="email" onChange={(e) => setRegisterEmail(e.target.value)} noValidate placeholder="Email" />
           </div>
           <div className="password">
             <label htmlFor="password">Password</label>
             <input type="password" required name="password" onChange={(e) => setRegisterPassword(e.target.value)} noValidate placeholder="Password" />
           </div>
           <div className="submit">
-            <Button variant="contained" color="primary" on>Register</Button>
+            <Button variant="contained" color="primary" >Register</Button>
           </div>
         </form>
       </div>
