@@ -8,9 +8,14 @@ import './App.css'
 function App() {
   return (
   <React.Fragment>
+      <NavigationBar />
+      <Router>
     <Switch>
       <Route path='/register' component={Register} />
+      <Route path="*" component={() => "404 NOT FOUND"} />
+
     </Switch>
+      </Router>
   </React.Fragment>
   );
 }
