@@ -21,5 +21,5 @@ For you to run the app you are supposed to clone the repo from github and then i
 
 - The app's database need to be running before you can add your todos whic means you have to go into the backend folder and run nodemon on the server.js file.
 
--You will we directed to the Register component in the front-end, where you register your email and password. After registering you will be redirected to the todo form where you can add your todos.
+- You will we directed to the Register component in the front-end, where you register your email and password. After registering you will be redirected to the todo form where you can add your todos.
 
