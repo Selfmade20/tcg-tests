@@ -21,11 +21,17 @@ function Register() {
         // <Redirect to='todos' />
     }
 
+    
+    const handleSubmit = event => {
+        event.preventDefault()
+    }
+
+
     return (
         <div className="wrapper">
             <div className="form-wrapper">
                 <h1>Register</h1>
-                <form noValidate>
+                <form onSubmit={handleSubmit}>
                     <div className="email">
                         <label htmlFor="email">Email</label>
                         <input type="email" required name="email" onChange={(e) => setRegisterEmail(e.target.value)} noValidate placeholder="Email" />
